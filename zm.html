@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ZM Pratas | Prata 925</title>
+    <meta name="description" content="ZM Pratas - Joias em prata 925 para deixar seu estilo ainda mais especial.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8f9fc;
+            color: #172033;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            background: rgba(5, 21, 48, 0.96);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            height: 75px;
+            padding: 0 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            color: white;
+        }
+
+        .logo span {
+            color: #cfd5df;
+            font-weight: 400;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #cbd7e8;
+        }
+
+        .menu-btn {
+            display: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 720px;
+            padding: 150px 25px 80px;
+            background:
+                radial-gradient(circle at 80% 20%, rgba(55,105,170,0.4), transparent 30%),
+                linear-gradient(135deg, #04142f, #0b2d5c 55%, #123e75);
+            color: white;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-text small {
+            display: inline-block;
+            color: #dce5f1;
+            letter-spacing: 3px;
+            font-size: 12px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(45px, 6vw, 78px);
+            line-height: 0.95;
+            letter-spacing: -3px;
+            margin-bottom: 25px;
+        }
+
+        .hero-text h1 span {
+            color: #cbd4df;
+            font-weight: 300;
+        }
+
+        .hero-text p {
+            max-width: 500px;
+            font-size: 18px;
+            line-height: 1.7;
+            color: #d7e0ec;
+            margin-bottom: 35px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 28px;
+            border-radius: 40px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #09244a;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        }
+
+        .btn-blue {
+            background: #0b3973;
+            color: white;
+        }
+
+        .btn-blue:hover {
+            background: #092d5c;
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            width: min(500px, 100%);
+            height: 550px;
+            object-fit: cover;
+            border-radius: 240px 240px 25px 25px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+        }
+
+        .hero-badge {
+            position: absolute;
+            bottom: 30px;
+            left: 20px;
+            background: rgba(255,255,255,0.95);
+            color: #09244a;
+            padding: 18px 22px;
+            border-radius: 15px;
+            font-weight: bold;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        /* =========================
+           BENEFÍCIOS
+        ========================= */
+
+        .benefits {
+            background: white;
+            padding: 55px 25px;
+        }
+
+        .benefits-container {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .benefit {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .benefit-icon {
+            width: 55px;
+            height: 55px;
+            margin: auto auto 15px;
+            border-radius: 50%;
+            background: #edf3fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 23px;
+        }
+
+        .benefit h3 {
+            font-size: 15px;
+            margin-bottom: 7px;
+        }
+
+        .benefit p {
+            color: #6d7582;
+            font-size: 13px;
+        }
+
+        /* =========================
+           SEÇÕES
+        ========================= */
+
+        section {
+            padding: 90px 25px;
+        }
+
+        .section-title {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 50px;
+        }
+
+        .section-title small {
+            color: #28578e;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .section-title h2 {
+            font-size: 40px;
+            margin: 12px 0;
+            color: #0a2346;
+        }
+
+        .section-title p {
+            color: #6c7480;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           CATEGORIAS
+        ========================= */
+
+        .categories {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .category {
+            height: 250px;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .category img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .category:hover img {
+            transform: scale(1.08);
+        }
+
+        .category-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: flex-end;
+            padding: 22px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* =========================
+           PRODUTOS
+        ========================= */
+
+        .products {
+            background: #eef3f9;
+        }
+
+        .product-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .product {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(15,35,60,0.06);
+            transition: 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(15,35,60,0.12);
+        }
+
+        .product-image {
+            height: 260px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .product:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-info small {
+            color: #718096;
+            font-size: 11px;
+        }
+
+        .product-info h3 {
+            margin: 7px 0;
+            color: #152b4b;
+            font-size: 17px;
+        }
+
+        .price {
+            font-size: 19px;
+            font-weight: bold;
+            color: #0b3973;
+            margin-bottom: 15px;
+        }
+
+        .product-btn {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+            background: #082b59;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .product-btn:hover {
+            background: #0d417d;
+        }
+
+        /* =========================
+           BANNER
+        ========================= */
+
+        .banner {
+            max-width: 1100px;
+            margin: auto;
+            min-height: 350px;
+            border-radius: 25px;
+            overflow: hidden;
+            position: relative;
+            background:
+                linear-gradient(90deg, rgba(3,18,43,0.95), rgba(3,18,43,0.4)),
+                url("https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1400&q=80")
+                center/cover;
+            display: flex;
+            align-items: center;
+            padding: 50px;
+            color: white;
+        }
+
+        .banner-content {
+            max-width: 550px;
+        }
+
+        .banner h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .banner p {
+            line-height: 1.7;
+            color: #e0e7f0;
+            margin-bottom: 25px;
+        }
+
+        /* =========================
+           SOBRE
+        ========================= */
+
+        .about {
+            background: white;
+        }
+
+        .about-container {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+
+        .about-text small {
+            color: #28578e;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .about-text h2 {
+            font-size: 42px;
+            color: #0a2346;
+            margin: 15px 0 20px;
+        }
+
+        .about-text p {
+            color: #6c7480;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        /* =========================
+           DEPOIMENTOS
+        ========================= */
+
+        .testimonials {
+            background: #f5f7fa;
+        }
+
+        .testimonial-grid {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 28px;
+            border-radius: 18px;
+        }
+
+        .stars {
+            color: #8da8c7;
+            margin-bottom: 15px;
+            letter-spacing: 3px;
+        }
+
+        .testimonial p {
+            color: #626b78;
+            line-height: 1.7;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial strong {
+            color: #18365d;
+            font-size: 14px;
+        }
+
+        /* =========================
+           INSTAGRAM
+        ========================= */
+
+        .instagram {
+            text-align: center;
+            background: #06234a;
+            color: white;
+        }
+
+        .instagram h2 {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .instagram p {
+            color: #c9d5e4;
+            margin-bottom: 25px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #03152f;
+            color: white;
+            padding: 50px 25px 25px;
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+            padding-bottom: 40px;
+        }
+
+        .footer-logo {
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            color: #aebccd;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        footer h3 {
+            margin-bottom: 18px;
+            font-size: 15px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 10px;
+            color: #aebccd;
+            font-size: 14px;
+        }
+
+        .copyright {
+            max-width: 1100px;
+            margin: auto;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #7f8fa3;
+            font-size: 12px;
+        }
+
+        /* =========================
+           WHATSAPP
+        ========================= */
+
+        .whatsapp {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #25D366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+            z-index: 999;
+            transition: 0.3s;
+        }
+
+        .whatsapp:hover {
+            transform: scale(1.08);
+        }
+
+        /* =========================
+           RESPONSIVO
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 75px;
+                left: 0;
+                width: 100%;
+                background: #051a38;
+                padding: 25px;
+                flex-direction: column;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .hero-container,
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding-top: 130px;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .hero-image img {
+                height: 430px;
+            }
+
+            .benefits-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .categories,
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .navbar {
+                padding: 0 18px;
+            }
+
+            .logo {
+                font-size: 21px;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 120px 20px 60px;
+            }
+
+            .hero-text h1 {
+                font-size: 48px;
+            }
+
+            .hero-text p {
+                font-size: 16px;
+            }
+
+            .hero-image img {
+                height: 350px;
+            }
+
+            section {
+                padding: 65px 20px;
+            }
+
+            .section-title h2 {
+                font-size: 32px;
+            }
+
+            .benefits-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px 10px;
+            }
+
+            .categories,
+            .product-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .category {
+                height: 190px;
+            }
+
+            .product-image {
+                height: 190px;
+            }
+
+            .product-info {
+                padding: 14px;
+            }
+
+            .product-info h3 {
+                font-size: 14px;
+            }
+
+            .price {
+                font-size: 16px;
+            }
+
+            .banner {
+                padding: 30px;
+                min-height: 400px;
+            }
+
+            .banner h2 {
+                font-size: 32px;
+            }
+
+            .about-container {
+                gap: 35px;
+            }
+
+            .about-image img {
+                height: 350px;
+            }
+
+            .about-text h2 {
+                font-size: 34px;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+    <div class="navbar">
+
+        <a href="#" class="logo">
+            ZM <span>PRATAS</span>
+        </a>
+
+        <nav id="menu">
+            <a href="#inicio">Início</a>
+            <a href="#colecao">Coleção</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#sobre">Sobre nós</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <div class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </div>
+
+    </div>
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="inicio">
+
+    <div class="hero-container">
+
+        <div class="hero-text">
+
+            <small>ZM Pratas · Prata 925</small>
+
+            <h1>
+                Seu brilho.<br>
+                <span>Seu estilo.</span>
+            </h1>
+
+            <p>
+                Joias em prata feitas para acompanhar
+                seus momentos mais especiais.
+                Elegância, delicadeza e personalidade
+                em cada detalhe.
+            </p>
+
+            <a href="#produtos" class="btn btn-primary">
+                CONHEÇA A COLEÇÃO
+            </a>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=900&q=85"
+                alt="Joias ZM Pratas"
+            >
+
+            <div class="hero-badge">
+                ✦ Prata 925
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     BENEFÍCIOS
+========================= -->
+
+<section class="benefits">
+
+    <div class="benefits-container">
+
+        <div class="benefit">
+            <div class="benefit-icon">💎</div>
+            <h3>Prata 925</h3>
+            <p>Qualidade em cada detalhe.</p>
+        </div>
+
+        <div class="benefit">
+            <div class="benefit-icon">✨</div>
+            <h3>Elegância</h3>
+            <p>Peças para todos os estilos.</p>
+        </div>
+
+        <div class="benefit">
+            <div class="benefit-icon">🎁</div>
+            <h3>Presente Perfeito</h3>
+            <p>Surpreenda quem você ama.</p>
+        </div>
+
+        <div class="benefit">
+            <div class="benefit-icon">🚚</div>
+            <h3>Envio Seguro</h3>
+            <p>Receba sua joia com segurança.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CATEGORIAS
+========================= -->
+
+<section id="colecao">
+
+    <div class="section-title">
+
+        <small>Explore</small>
+
+        <h2>Nossa coleção</h2>
+
+        <p>
+            Escolha a peça que mais combina com
+            sua personalidade.
+        </p>
+
+    </div>
+
+    <div class="categories">
+
+        <a href="#produtos" class="category">
+
+            <img
+                src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80"
+                alt="Colares"
+            >
+
+            <div class="category-overlay">
+                Colares
+            </div>
+
+        </a>
+
+        <a href="#produtos" class="category">
+
+            <img
+                src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80"
+                alt="Anéis"
+            >
+
+            <div class="category-overlay">
+                Anéis
+            </div>
+
+        </a>
+
+        <a href="#produtos" class="category">
+
+            <img
+                src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80"
+                alt="Brincos"
+            >
+
+            <div class="category-overlay">
+                Brincos
+            </div>
+
+        </a>
+
+        <a href="#produtos" class="category">
+
+            <img
+                src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=600&q=80"
+                alt="Pulseiras"
+            >
+
+            <div class="category-overlay">
+                Pulseiras
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PRODUTOS
+========================= -->
+
+<section class="products" id="produtos">
+
+    <div class="section-title">
+
+        <small>Mais desejados</small>
+
+        <h2>Peças em destaque</h2>
+
+        <p>
+            Confira algumas das nossas peças favoritas.
+        </p>
+
+    </div>
+
+    <div class="product-grid">
+
+
+        <!-- PRODUTO 1 -->
+
+        <div class="product">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=700&q=80"
+                    alt="Colar em prata"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <small>PRATA 925</small>
+
+                <h3>Colar Elegance</h3>
+
+                <div class="price">
+                    R$ 149,90
+                </div>
+
+                <button
+                    class="product-btn"
+                    onclick="comprar('Colar Elegance - R$ 149,90')"
+                >
+                    COMPRAR
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUTO 2 -->
+
+        <div class="product">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=700&q=80"
+                    alt="Anel em prata"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <small>PRATA 925</small>
+
+                <h3>Anel Delicate</h3>
+
+                <div class="price">
+                    R$ 119,90
+                </div>
+
+                <button
+                    class="product-btn"
+                    onclick="comprar('Anel Delicate - R$ 119,90')"
+                >
+                    COMPRAR
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUTO 3 -->
+
+        <div class="product">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=80"
+                    alt="Brinco em prata"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <small>PRATA 925</small>
+
+                <h3>Brinco Lumière</h3>
+
+                <div class="price">
+                    R$ 89,90
+                </div>
+
+                <button
+                    class="product-btn"
+                    onclick="comprar('Brinco Lumière - R$ 89,90')"
+                >
+                    COMPRAR
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUTO 4 -->
+
+        <div class="product">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=80"
+                    alt="Pulseira em prata"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <small>PRATA 925</small>
+
+                <h3>Pulseira Classic</h3>
+
+                <div class="price">
+                    R$ 139,90
+                </div>
+
+                <button
+                    class="product-btn"
+                    onclick="comprar('Pulseira Classic - R$ 139,90')"
+                >
+                    COMPRAR
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     BANNER
+========================= -->
+
+<section>
+
+    <div class="banner">
+
+        <div class="banner-content">
+
+            <h2>
+                Uma joia para<br>
+                marcar momentos.
+            </h2>
+
+            <p>
+                Escolha uma peça especial para você
+                ou surpreenda alguém importante.
+            </p>
+
+            <a
+                href="https://wa.me/5516999999999"
+                target="_blank"
+                class="btn btn-primary"
+            >
+                FALAR NO WHATSAPP
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SOBRE
+========================= -->
+
+<section class="about" id="sobre">
+
+    <div class="about-container">
+
+        <div class="about-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80"
+                alt="ZM Pratas"
+            >
+
+        </div>
+
+        <div class="about-text">
+
+            <small>Sobre a ZM Pratas</small>
+
+            <h2>
+                Mais que uma joia.
+                Uma expressão do seu estilo.
+            </h2>
+
+            <p>
+                A ZM Pratas nasceu para trazer peças
+                elegantes, delicadas e cheias de personalidade.
+            </p>
+
+            <p>
+                Trabalhamos para oferecer uma experiência
+                especial desde a escolha da sua joia até
+                o momento em que ela chega até você.
+            </p>
+
+            <a
+                href="https://wa.me/5516999999999"
+                target="_blank"
+                class="btn btn-blue"
+            >
+                CONHEÇA A ZM PRATAS
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DEPOIMENTOS
+========================= -->
+
+<section class="testimonials">
+
+    <div class="section-title">
+
+        <small>Clientes ZM</small>
+
+        <h2>Quem compra, ama.</h2>
+
+        <p>
+            Alguns comentários de quem já conhece
+            a ZM Pratas.
+        </p>
+
+    </div>
+
+    <div class="testimonial-grid">
+
+        <div class="testimonial">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                "A joia é ainda mais linda pessoalmente.
+                Super delicada e chegou muito bem embalada."
+            </p>
+
+            <strong>— Cliente ZM</strong>
+
+        </div>
+
+        <div class="testimonial">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                "Comprei para presentear e foi um sucesso.
+                Atendimento maravilhoso!"
+            </p>
+
+            <strong>— Cliente ZM</strong>
+
+        </div>
+
+        <div class="testimonial">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                "A qualidade das peças me surpreendeu.
+                Já estou escolhendo a próxima."
+            </p>
+
+            <strong>— Cliente ZM</strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INSTAGRAM
+========================= -->
+
+<section class="instagram" id="contato">
+
+    <h2>
+        Siga a ZM Pratas
+    </h2>
+
+    <p>
+        Veja nossas novidades, lançamentos
+        e inspirações no Instagram.
+    </p>
+
+    <a
+        href="https://instagram.com/"
+        target="_blank"
+        class="btn btn-primary"
+    >
+        @ZMPRATAS
+    </a>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <div>
+
+            <div class="footer-logo">
+                ZM PRATAS
+            </div>
+
+            <p>
+                Joias em prata para deixar
+                seus momentos ainda mais especiais.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>Navegação</h3>
+
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#colecao">Coleção</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#sobre">Sobre nós</a></li>
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h3>Contato</h3>
+
+            <ul>
+                <li>WhatsApp</li>
+                <li>Instagram</li>
+                <li>Atendimento online</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 ZM Pratas. Todos os direitos reservados.
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     WHATSAPP
+========================= -->
+
+<a
+    href="https://wa.me/5516999999999"
+    target="_blank"
+    class="whatsapp"
+    aria-label="Falar no WhatsApp"
+>
+    ☎
+</a>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+    function toggleMenu() {
+
+        const menu = document.getElementById("menu");
+
+        menu.classList.toggle("active");
+
+    }
+
+
+    function comprar(produto) {
+
+        const numero = "5516999999999";
+
+        const mensagem =
+            "Olá! Vim pelo site da ZM Pratas e tenho interesse no produto: "
+            + produto
+            + ". Gostaria de mais informações.";
+
+        const url =
+            "https://wa.me/"
+            + numero
+            + "?text="
+            + encodeURIComponent(mensagem);
+
+        window.open(url, "_blank");
+
+    }
+
+
+    // Fecha o menu mobile ao clicar em algum link
+
+    document.querySelectorAll("nav a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            document
+                .getElementById("menu")
+                .classList.remove("active");
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
